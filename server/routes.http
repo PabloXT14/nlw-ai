@@ -23,3 +23,15 @@ Content-Type: application/json
 {
   "prompt": "whatsapp audio"
 }
+
+###
+
+# @name generate-ai-completion
+POST http://localhost:3333/ai/complete
+Content-Type:  application/json
+
+{
+  "videoId": "09558b77-ce05-4ef5-9447-a64e33b2aa4d",
+  "temperature": 0.5,
+  "template": "Gere um resumo sucinto da transcrição do vídeo informado a seguir: '''{transcription}'''"
+}
