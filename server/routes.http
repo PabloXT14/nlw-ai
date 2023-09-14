@@ -13,3 +13,13 @@ Content-Type: image/png
 
 < ./example.mp3
 ------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+###
+
+# @name create-transcription
+POST http://localhost:3333/videos/09558b77-ce05-4ef5-9447-a64e33b2aa4d/transcription
+Content-Type: application/json
+
+{
+  "prompt": "whatsapp audio"
+}
