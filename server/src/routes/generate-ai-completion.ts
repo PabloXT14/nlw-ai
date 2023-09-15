@@ -1,5 +1,8 @@
+import 'dotenv/config'
 import { FastifyInstance} from 'fastify'
 import { z } from 'zod'
+import { streamToResponse, OpenAIStream } from 'ai'
+
 import { prisma } from '../lib/prisma'
 import { openai } from '../lib/openai'
 
@@ -31,8 +34,18 @@ export async function generateAiCompletionRoute(app: FastifyInstance) {
       messages: [
         { role: 'user', content: promptMessage },
       ],
+      stream: true,
     })
 
-    return reply.status(200).send({ response })
+    // Configurando Stream de AI para ir devolvendo a resposta do OpenAI aos poucos para o Front-end conforme for sendo gerada
+    const stream = OpenAIStream(response)
+
+    // reply.raw = response nativo do node sem o wrapper do fastify por volta
+    return streamToResponse(stream, reply.raw, {
+      headers: {
+        'Access-Control-Allow-Origin': process.env.ENABLED_CORS ?? '*',
+        'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE',
+      },
+    })
   })
 }
