@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Github, Wand2 } from 'lucide-react';
 import { Button } from './components/ui/button';
 import { Separator } from './components/ui/separator';
@@ -10,6 +11,8 @@ import { VideoInputForm } from './components/video-inpuit-form';
 import { PromptSelect } from './components/prompt-select';
 
 export function App() {
+  const [temperature, setTemperature] = useState(0.8)
+
   function handlePromptSelected(template: string) {
     console.log(template)
   }
@@ -86,10 +89,11 @@ export function App() {
             <div className='space-y-4'>
               <Label>Temperatura</Label>
               <Slider
-                defaultValue={[0.5]}
                 min={0}
                 max={1}
                 step={0.1}
+                value={[temperature]}
+                onValueChange={value => setTemperature(value[0])}
               />
               <span className='block text-sm text-muted-foreground italic leading-relaxed'>
                 Valores mais altor tendem a deixar o resultado mais criativo e com possíveis erros.
