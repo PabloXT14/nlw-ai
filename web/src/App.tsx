@@ -46,9 +46,14 @@ export function App() {
 
           <Separator orientation='vertical' className='h-6' />
 
-          <Button variant='outline'>
-            <Github className='w-4 h-4 mr-2' />
-            Github
+          <Button variant='outline' asChild>
+            <a
+              href="https://github.com/PabloXT14/nlw-ai"
+              target="_blank"
+              rel="noopener noreferrer">
+              <Github className='w-4 h-4 mr-2' />
+              Github
+            </a>
           </Button>
         </div>
       </div>
@@ -57,13 +62,13 @@ export function App() {
         {/* Content */}
         <div className='flex flex-col flex-1 gap-4'>
           <div className='grid grid-rows-2 gap-4 flex-1'>
-            <Textarea 
+            <Textarea
               className='resize-none p-4 leading-relaxed'
               placeholder='Inclua o prompt para a IA...'
               value={input}
               onChange={handleInputChange}
             />
-            <Textarea 
+            <Textarea
               className='resize-none p-4 leading-relaxed'
               placeholder='Resultado gerado pela IA'
               readOnly
@@ -72,7 +77,7 @@ export function App() {
           </div>
 
           <p className='text-sm text-muted-foreground'>
-          Lembre-se: você pode utilizar a variável <code className="text-violet-400">{`{transcription}`}</code> no seu prompt para adicionar o conteúdo da transcrição do vídeo selecionado.
+            Lembre-se: você pode utilizar a variável <code className="text-violet-400">{`{transcription}`}</code> no seu prompt para adicionar o conteúdo da transcrição do vídeo selecionado.
           </p>
         </div>
 
@@ -123,7 +128,7 @@ export function App() {
 
             <Button disabled={isLoading} type='submit' className='w-full'>
               Executar
-              <Wand2 className='w-4 h-4 ml-2'/>
+              <Wand2 className='w-4 h-4 ml-2' />
             </Button>
           </form>
         </aside>
