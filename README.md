@@ -12,7 +12,7 @@
 
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/pabloxt14/nlw-ai">
   
-  <a href="https://github.com/pabloxt14/nlw-aicommits/master">
+  <a href="https://github.com/pabloxt14/nlw-ai/commits/master">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/pabloxt14/nlw-ai">
   </a>
     
