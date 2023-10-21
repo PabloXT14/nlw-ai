@@ -171,7 +171,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 > 📘 **Info**
 >
-> Para mais detalhes das dependências gerais do front-end veja o arquivo [package.json](./server/package.json)
+> Para mais detalhes das dependências gerais do front-end veja o arquivo [package.json](https://github.com/PabloXT14/nlw-ai/blob/main/server/package.json)
 
 #### **Website**  ([Vite](https://vitejs.dev/)  +  [TypeScript](https://www.typescriptlang.org/))
 
@@ -185,7 +185,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 > 📘 **Info**
 >
-> Para mais detalhes das dependências gerais do back-end veja o arquivo [package.json](./web/package.json)
+> Para mais detalhes das dependências gerais do back-end veja o arquivo [package.json](https://github.com/PabloXT14/nlw-ai/blob/main/web/package.json)
 
 ---
 
